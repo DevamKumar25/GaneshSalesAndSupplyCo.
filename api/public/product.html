@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedStore | Ecommerce Website Design</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <!---google font  poopins -->
+</head>
+<body>
+    <div class="container">
+    <div class="navbar">
+        <div class="logo">
+          <a href="index.html"><img loading="lazy" src="pic/logo2-remove.png" width="180px" />
+        </div>
+<nav>
+  <ul id="MenuItems">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="product.html">Product</a></li>
+    <li class="dropdown">
+      <a href="#">Info</a>
+      <div class="dropdown-content">
+        <a href="about.html">About</a>
+        <a href="F.A.Q.html">F.A.Q</a>
+        <a href="#">Team</a>
+      </div>
+    </li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="account.html">Account</a></li>
+  </ul>
+</nav>
+        <a href="cart.html"><img src="pic/cart.png" width="25px" height="25px"></a>
+        <img src="pic/menu.png" class="menu-icon" onclick="menutoggle()">
+    </div>
+    
+
+    </div>
+<div class="small-container">
+    <div class="row row-2">
+        <h2>All Products</h2>
+        <select>
+    <option value="Best selling">Best selling</option>
+    <option value="Alphabetically,A-Z">Alphabetically, A-Z</option>
+    <option value="Alphabetically,Z-A">Alphabetically, Z-A</option>
+    <option value="Price,low to high">Price, low to high</option>
+    <option value="Price,high to low">Price, high to low</option>
+    <option value="Date,old to new">Date, old to new</option>
+    <option value="Date,new to old">Date, new to old</option>
+</select>
+
+    </div>
+    <div class="row">
+
+                <div class="col-4">
+  <img src="pic/pic21.png" />
+  <br>
+  <br>
+  <h4>
+    2 - Axis digital readout system for lathe - ISL-SET1
+
+  </h4>
+  
+  <p class="ruppes">Rs. 53,300</p>
+  <p><del>Rs. 68,224</del></p>
+  
+  <button class="add-cart-btn" 
+          onclick="addToCart('pic/pic21.png', '2 - Axis digital readout system for lathe - ISL-SET1', 53,300)">
+    Add to Cart
+  </button>
+</div>
+
+                <div class="col-4">
+  <img src="pic/pic22.png" />
+  <br>
+  <br>
+  <h4>
+    3 Way Universal Tilt & Swivel Angle Vice - Apex Code 730
+
+  </h4>
+  
+  <p class="ruppes">Rs. 18,659</p>
+  <p><del>Rs. 23,889</del></p>
+  
+  <button class="add-cart-btn" 
+          onclick="addToCart('pic/pic22.png', '3 Way Universal Tilt & Swivel Angle Vice', 18,659)">
+    Add to Cart
+  </button>
+</div>
+
+                <div class="col-4">
+  <img src="pic/pic23.png" />
+  <br>
+  <br>
+  <h4>
+    360° Swivel VIDEOSCOPES (BASIC TYPE) - ISV
+
+  </h4>
+  
+  <p class="ruppes">Rs. 108,000</p>
+  <p><del>Rs. 138,240</del></p>
+  
+  <button class="add-cart-btn" 
+          onclick="addToCart('pic/pic23.png', '360° Swivel VIDEOSCOPES (BASIC TYPE)', 108,0)">
+    Add to Cart
+  </button>
+</div>
+
+               <div class="col-4">
+  <img src="pic/pic24.png" />
+  <br>
+  <br>
+  <h4>
+    Belt Tension Tester - BTR
+
+  </h4>
+  
+  <p class="ruppes">Rs. 7,500</p>
+  <p><del>Rs. 9,380</del></p>
+  
+  <button class="add-cart-btn" 
+          onclick="addToCart('pic/pic24.png', 'Belt Tension Tester - BTR', 9,380)">
+    Add to Cart
+  </button>
+</div>
+
+
+    </div>
+
+    <div class="row">
+                <div class="col-4">
+  <img src="pic/pic24.png" />
+  <br>
+  <br>
+  <h4>
+    Bevel Protractor - 187
+
+  </h4>
+  
+  <p class="ruppes">Rs. 2,199</p>
+  <p><del>Rs. 2,815</del></p>
+  
+  <button class="add-cart-btn" 
+          onclick="addToCart('pic/pic24.png', 'Bevel Protractor - 187', 2,199)">
+    Add to Cart
+  </button>
+</div>
+
+                <div class="col-4">
+  <img src="pic/pic26.png" />
+  <br>
+  <br>
+  <h4>
+    Blade Micrometer - 122
+
+  </h4>
+  
+  <p class="ruppes">Rs.  9,699</p>
+  <p><del>Rs. 19,400</del></p>
+  
+  <button class="add-cart-btn" 
+          onclick="addToCart('pic/pic26.png', 'Blade Micrometer - 122',  9,699)">
+    Add to Cart
+  </button>
+</div>
+
+                <div class="col-4">
+  <img src="pic/pic27.png" />
+  <br>
+  <br>
+  <h4>
+    Blade Micrometer - 3232
+
+  </h4>
+  
+  <p class="ruppes">Rs.  7,325</p>
+  <p><del>Rs. 9,357</del></p>
+  
+  <button class="add-cart-btn" 
+          onclick="addToCart('pic/pic27.png', 'Blade Micrometer - 3232',  7,325)">
+    Add to Cart
+  </button>
+</div>
+
+                <div class="col-4">
+  <img src="pic/pic29.png" />
+  <br>
+  <br>
+  <h4>
+    Baker Dial Indicator 0.01-5MM : K40
+
+  </h4>
+  
+  <p class="ruppes">Rs. 2,049</p>
+  <p><del>Rs. 2,622.72</del></p>
+  
+  <button class="add-cart-btn" 
+          onclick="addToCart('pic/pic29.png', 'Baker Dial Indicator 0.01-5MM : K40', 2049)">
+    Add to Cart
+  </button>
+</div>
+
+
+    </div>
+
+    <div class="row">
+               <div class="col-4">
+  <img src="pic/pic30.png" />
+  <br>
+  <br>
+  <h4>
+    Baker Dial Indicator 0.01-10MM : K02
+
+  </h4>
+  
+  <p class="ruppes">Rs. 1,299</p>
+  <p><del>Rs. 1,662.72</del></p>
+  
+  <button class="add-cart-btn" 
+          onclick="addToCart('pic/pic30.png', 'Baker Dial Indicator ', 1,299)">
+    Add to Cart
+  </button>
+</div>
+
+                <div class="col-4">
+  <img src="pic/pic31.png" />
+  <br>
+  <br>
+  <h4>
+    Baker Dial Indicator 0.01-25MM : K08
+
+  </h4>
+  
+  <p class="ruppes">Rs.  2,199</p>
+  <p><del>Rs. 2,814.72</del></p>
+  
+  <button class="add-cart-btn" 
+          onclick="addToCart('pic/pic31.png', 'Baker Dial Indicator ',  2,199)">
+    Add to Cart
+  </button>
+</div>
+
+                <div class="col-4">
+  <img src="pic/pic32.png" />
+  <br>
+  <br>
+  <h4>
+    Baker Dial Indicator 0.01-50MM : K72
+
+  </h4>
+  
+  <p class="ruppes">Rs. 6,399</p>
+  <p><del>Rs. 8,190.72</del></p>
+  
+  <button class="add-cart-btn" 
+          onclick="addToCart('pic/pic32.png', 'Baker Dial Indicator ', 6,399)">
+    Add to Cart
+  </button>
+</div>
+
+                <div class="col-4">
+  <img src="pic/pic33.png" />
+  <br>
+  <br>
+  <h4>
+    Anglock Milling Vice - Soggo Code SLV
+
+  </h4>
+  
+  <p class="ruppes">Rs. 9,300</p>
+  <p><del>Rs. 11,630</del></p>
+  
+  <button class="add-cart-btn" 
+          onclick="addToCart('pic/pic10.png', 'Anglock Milling Vice', 9,300)">
+    Add to Cart
+  </button>
+</div>
+
+
+    </div>
+
+
+    <div class="page-btn">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>&#8594;</span>
+    </div>
+    
+    
+</div>
+
+
+
+
+
+
+<!-----------------footer------------------->
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+      <!-- First Section -->
+      <div class="footer-col-1">
+        <h3>100% Authentic Products</h3>
+        <p>Guaranteed savings on your purchase and 100% authentic products to choose.</p>
+      </div>
+      <div class="footer-col-1">
+        <h3>Pan India Delivery</h3>
+        <p>More than 20,000 pin codes serviceable.</p>
+      </div>
+      <div class="footer-col-1">
+        <h3>Payment Secured</h3>
+        <p>Tie-ups with secure payment gateways to offer you a seamless payment experience.</p>
+      </div>
+      <div class="footer-col-1">
+        <h3>24x7 Customer Support</h3>
+        <p>You can always rely on us to help you with your sourcing requirements.</p>
+      </div>
+    </div>
+   
+    <br>
+    <br>
+    <br>
+    
+    <!-- Second Section -->
+    <div class="row">
+      <div class="footer-col-2">
+        <h3>About the Shop</h3>
+        <p>Ganesh Sales And Supply Company, the trusted name for Engineering and Industrial Tools, established in 1943. We deal in all kinds of precision measuring instruments and technical tools for more than 30 years. We try to cater to the Indian Industry.</p>
+      </div>
+      
+      <div class="footer-col-3">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">F.A.Q</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Refund Policy</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col-4">
+        <h3>Contact Information</h3>
+    <p>E-6, Ganpati Plaza, Phool Bagh Bhiwadi Rajasthan 301019</p>
+    <p>India</p>
+    <p><i class="fa fa-phone"></i> +91-XXXXXXXXXX</p>
+    <p><i class="fa fa-envelope"></i> info@ganeshsales-supplycompany.com</p>
+      </div>
+    </div>
+
+    <hr>
+    
+    <p class="Copyright">&copy; Ganesh Sales And Supply Company</p>
+  </div>
+</div>
+
+<!---------Js for toggle Menu---------------------------->
+
+
+</body>
+</html>

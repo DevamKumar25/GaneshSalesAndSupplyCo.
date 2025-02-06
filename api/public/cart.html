@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Products - RedStore</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <!---google font  poopins -->
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <!-- <img src="pic/logo2-remove.png" width="180px" /> -->
+        <a href="index.html"><img src="pic/logo2-remove.png" width="180px" />
+        </div>
+<nav>
+  <ul id="MenuItems">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="product.html">Product</a></li>
+    <li class="dropdown">
+      <a href="#">Info</a>
+      <div class="dropdown-content">
+        <a href="about.html">About</a>
+        <a href="F.A.Q.html">F.A.Q</a>
+        <a href="#">Team</a>
+      </div>
+    </li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="account.html">Account</a></li>
+  </ul>
+</nav>
+        <a href="cart.html"
+          ><img src="pic/cart.png" width="25px" height="25px"
+        /></a>
+        <img src="pic/menu.png" class="menu-icon" onclick="menutoggle()" />
+      </div>
+    </div>
+
+    <div class="small-container cart-page">
+      <table id="cartTable" style="display: none">
+        <tr>
+          <th>Product</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+        </tr>
+      </table>
+
+      <!-- Empty cart message -->
+      <div id="emptyCartMessage" style="display: none">
+         <img src="addToCart.png" alt="" srcset="" width="20%" height="20%">
+         <h3 class=".vollkorn-custom ">Your cart is empty</h3>
+         <a href="product.html" class="btn">Shop our products</a>
+
+      </div>
+
+      <!-- Total price section (will be hidden if cart is empty) -->
+      <div class="total-price" id="totalPriceSection" style="display: none;">
+        <table>
+          <tr>
+            <td>Subtotal</td>
+            <td id="subtotal">$0.00</td>
+          </tr>
+          <tr>
+            <td>Tax</td>
+            <td id="tax">$0.00</td>
+          </tr>
+          <tr>
+            <td>Total</td>
+            <td id="total">$0.00</td>
+          </tr>
+        </table>
+        <a href="placeorder.html" class="btn" >Place Order</a>
+      </div>
+    </div>
+
+<!-----------------footer------------------->
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+      <!-- First Section -->
+      <div class="footer-col-1">
+        <h3>100% Authentic Products</h3>
+        <p>Guaranteed savings on your purchase and 100% authentic products to choose.</p>
+      </div>
+      <div class="footer-col-1">
+        <h3>Pan India Delivery</h3>
+        <p>More than 20,000 pin codes serviceable.</p>
+      </div>
+      <div class="footer-col-1">
+        <h3>Payment Secured</h3>
+        <p>Tie-ups with secure payment gateways to offer you a seamless payment experience.</p>
+      </div>
+      <div class="footer-col-1">
+        <h3>24x7 Customer Support</h3>
+        <p>You can always rely on us to help you with your sourcing requirements.</p>
+      </div>
+    </div>
+   
+    <br>
+    <br>
+    <br>
+    
+    <!-- Second Section -->
+    <div class="row">
+      <div class="footer-col-2">
+        <h3>About the Shop</h3>
+        <p>Ganesh Sales And Supply Company, the trusted name for Engineering and Industrial Tools, established in 1943. We deal in all kinds of precision measuring instruments and technical tools for more than 30 years. We try to cater to the Indian Industry.</p>
+      </div>
+      
+      <div class="footer-col-3">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">F.A.Q</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Refund Policy</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col-4">
+        <h3>Contact Information</h3>
+    <p>E-6, Ganpati Plaza, Phool Bagh Bhiwadi Rajasthan 301019</p>
+    <p>India</p>
+    <p><i class="fa fa-phone"></i> +91-XXXXXXXXXX</p>
+    <p><i class="fa fa-envelope"></i> info@ganeshsales-supplycompany.com</p>
+      </div>
+    </div>
+
+    <hr>
+    
+    <p class="Copyright">&copy; Ganesh Sales And Supply Company</p>
+  </div>
+</div>
+  </body>
+</html>

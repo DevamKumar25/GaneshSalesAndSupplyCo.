@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedStore | Ecommerce Website Design</title>
+    <link rel="stylesheet" href="style.css">
+   <style>
+    
+    
+    
+.account-page h1{
+  padding-bottom: 5px;
+  margin-left: 100px;
+  font-size: 60px;
+  margin-right: 950px;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 200px 5px 100px;
+  max-width: 1500px;
+  margin: 10px 10px 0 0;
+}
+
+.contactInfo {
+  flex: 1;
+  max-width: 100%;
+  margin-right: 150px;
+  padding-left: 10px;
+  border-radius: 5px;
+}
+
+.contactInfo h3 {
+  margin-bottom: 10px;
+  color: #ff523b;
+  font-size: 23px;
+}
+
+.contactInfo p {
+  margin: 5px 0;
+}
+
+.userform {
+  flex: 1;
+  max-width: 100%;
+  padding: 40px;
+  padding-right: 100px;
+}
+
+.userform h3 {
+  margin-bottom: 15px;
+}
+
+.userform form {
+  display: flex;
+  flex-direction: column;
+}
+
+.userform label {
+  margin: 15px 0 5px;
+}
+
+.userform input, .userform textarea {
+  padding: 10px;
+  border: 1.6px solid #ff523b;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.message {
+  width: 100%;
+  height: 150px;
+}
+
+.userform button.btn {
+  padding: 10px 15px;
+  background-color: #ff523b;
+  font-size: 15px;
+  border-radius: 4px;
+}
+
+.userform button.btn:hover {
+  background-color: #424944;
+}
+
+hr {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+
+@media (max-width: 800px) {
+  .account-page h1 {
+    margin-left: 20px;
+    font-size: 40px;
+    margin-right: 20px;
+  }
+
+  .contact-container {
+    padding: 10px 20px;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    margin: 0;
+  }
+
+  .contactInfo, .userform {
+    max-width: 100%;
+    margin-right: 0;
+    padding: 20px;
+  }
+
+  .contactInfo h3 {
+    font-size: 20px;
+  }
+
+  .userform {
+    width: 80%;
+    padding: 10px 10px;
+  }
+  form label{
+    padding-right: 240px;
+  }
+
+  .userform input,
+  .userform textarea {
+    padding: 8px;
+    width: 100%;
+  }
+
+  .userform button.btn {
+    font-size: 14px;
+  }
+}
+</style> 
+    <script src="script.js" defer></script>
+    <!---google font  poopins -->
+</head>
+<body>
+    <div class="container">
+    <div class="navbar">
+        <div class="logo">
+          <a href="index.html"><img loading="lazy" src="pic/logo2-remove.png" width="180px" />
+        </div>
+<nav>
+  <ul id="MenuItems">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="product.html">Product</a></li>
+    <li class="dropdown">
+      <a href="#">Info</a>
+      <div class="dropdown-content">
+        <a href="about.html">About</a>
+        <a href="F.A.Q.html">F.A.Q</a>
+        <a href="#">Team</a>
+      </div>
+    </li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="account.html">Account</a></li>
+  </ul>
+</nav>
+        <a href="cart.html"><img src="pic/cart.png" width="25px" height="25px"></a>
+        <img src="pic/menu.png" class="menu-icon" onclick="menutoggle()">
+    </div>
+    </div>
+
+
+
+
+    <div class="account-page">
+      <div class="container">
+        <div class="row">
+
+          <h1>Contact</h1>
+<div class="contact-container">
+  <div class="contactInfo">
+    <h3>GANESH SALES AND SUPPLY COMPANY</h3>
+    <p>E-6, Ganpati Plaza, Phool Bagh Bhiwadi Rajasthan 301019</p>
+    <p>India</p>
+    <p><i class="fa fa-phone"></i> +91-XXXXXXXXXX</p>
+    <p><i class="fa fa-envelope"></i> info@ganeshsales-supplycompany.com</p>
+  </div>
+
+  <hr>
+
+  <div class="userform">
+    <img loading="lazy" src="conatct.mail.png" alt="Contact Mail">
+    <h3>Get in Touch with us!</h3>
+    <p>*Mandatory field</p>
+    <form action="http://localhost:3000/send" method="POST">
+      <label for="name">Name*</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">E-mail*</label>
+      <input type="email" id="email" name="email" placeholder="abc@gmail.com" required>
+
+      <label for="phone">Phone Number*</label>
+      <input type="tel" id="phone" name="phone" placeholder="XXXXXXXXXX" required>
+
+      <label for="message">Message*</label>
+      <textarea class="message" name="message"required></textarea>
+
+      <button class="btn" type="submit">Send</button>
+    </form>
+  </div>
+</div> 
+        </div>
+      </div>
+    </div>
+
+
+
+<!-----------------footer------------------->
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+      <!-- First Section -->
+      <div class="footer-col-1">
+        <h3>100% Authentic Products</h3>
+        <p>Guaranteed savings on your purchase and 100% authentic products to choose.</p>
+      </div>
+      <div class="footer-col-1">
+        <h3>Pan India Delivery</h3>
+        <p>More than 20,000 pin codes serviceable.</p>
+      </div>
+      <div class="footer-col-1">
+        <h3>Payment Secured</h3>
+        <p>Tie-ups with secure payment gateways to offer you a seamless payment experience.</p>
+      </div>
+      <div class="footer-col-1">
+        <h3>24x7 Customer Support</h3>
+        <p>You can always rely on us to help you with your sourcing requirements.</p>
+      </div>
+    </div>
+   
+    <br>
+    <br>
+    <br>
+    
+    <!-- Second Section -->
+    <div class="row">
+      <div class="footer-col-2">
+        <h3>About the Shop</h3>
+        <p>Ganesh Sales And Supply Company, the trusted name for Engineering and Industrial Tools, established in 1943. We deal in all kinds of precision measuring instruments and technical tools for more than 30 years. We try to cater to the Indian Industry.</p>
+      </div>
+      
+      <div class="footer-col-3">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">F.A.Q</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Refund Policy</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col-4">
+        <h3>Contact Information</h3>
+    <p>E-6, Ganpati Plaza, Phool Bagh Bhiwadi Rajasthan 301019</p>
+    <p>India</p>
+    <p><i class="fa fa-phone"></i> +91-XXXXXXXXXX</p>
+    <p><i class="fa fa-envelope"></i> info@ganeshsales-supplycompany.com</p>
+      </div>
+    </div>
+
+    <hr>
+    
+    <p class="Copyright">&copy; Ganesh Sales And Supply Company</p>
+  </div>
+</div>
+
+<!---------Js for toggle Menu---------------------------->
+
+    
+   <script>
+document.querySelector('form').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData.entries());
+
+    fetch('http://localhost:3000/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.text())
+    .then(result => {
+        alert(result);
+        event.target.reset(); 
+    })
+    .catch(error => alert('Failed to send message'));
+});
+
+
+   </script>
+</body>
+</html>

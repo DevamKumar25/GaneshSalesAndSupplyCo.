@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account - RedStore</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+
+    <!-- Add Firebase SDK -->
+    <script type="module">
+      // Import Firebase modules (modern syntax)
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+      import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
+      import { getFirestore } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js";
+
+      // Firebase configuration (replace with your credentials)
+      const firebaseConfig = {
+        apiKey: "AIzaSyCcKzZMimsG5BCfWyfTeZoT1EdeLnbObMo",
+        authDomain: "ganeshsales-fb59e.firebaseapp.com",
+        projectId: "ganeshsales-fb59e",
+        storageBucket: "ganeshsales-fb59e.appspot.com", // Fixed redundant storageBucket declaration
+        messagingSenderId: "204414840012",
+        appId: "1:204414840012:web:8daa3aac118053726b6669",
+        measurementId: "G-PYE9VBPG9B",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+      const db = getFirestore(app);
+
+      // **Register User**
+      document.getElementById("RegForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        let email = document.getElementById("register-email").value;
+        let password = document.getElementById("register-password").value;
+
+        createUserWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            alert("Registration Successful!");
+            window.location.href = "index.html"; // Redirect to home page
+          })
+          .catch((error) => {
+            alert(error.message);
+          });
+      });
+
+      // **Login User**
+      document.getElementById("LoginForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        let email = document.getElementById("login-email").value;
+        let password = document.getElementById("login-password").value;
+
+        signInWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            alert("Login Successful!");
+            window.location.href = "index.html"; // Redirect to home page
+          })
+          .catch((error) => {
+            alert(error.message);
+          });
+      });
+
+      // **Password Reset**
+      document.getElementById("forgot-password").addEventListener("click", () => {
+        let email = prompt("Enter your email to reset the password:");
+        if (email) {
+          sendPasswordResetEmail(auth, email)
+            .then(() => {
+              alert("Password reset link sent to your email.");
+            })
+            .catch((error) => {
+              alert(error.message);
+            });
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="pic/logo2-remove.png" width="180px" /></a>
+        </div>
+        <nav>
+          <ul id="MenuItems">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Product</a></li>
+            <li class="dropdown">
+              <a href="#">Info</a>
+              <div class="dropdown-content">
+                <a href="about.html">About</a>
+                <a href="F.A.Q.html">F.A.Q</a>
+                <a href="#">Team</a>
+              </div>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="account.html">Account</a></li>
+          </ul>
+        </nav>
+        <a href="cart.html">
+          <img src="pic/cart.png" width="25px" height="25px" />
+        </a>
+        <img
+          src="pic/menu.png"
+          class="menu-icon"
+          onclick="menutoggle()"
+          alt="Menu Icon"
+        />
+      </div>
+    </div>
+
+    <div class="account-page">
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <img src="d4.png" width="50%" height="100%" />
+          </div>
+
+          <div class="col-2">
+            <div class="form-container">
+              <div class="form-btn">
+                <span onclick="login()">login</span>
+                <span onclick="register()">Register</span>
+                <hr id="Indicator" />
+              </div>
+
+              <form id="LoginForm">
+                <input type="text" id="login-email" placeholder="Email" required />
+                <input type="password" id="login-password" placeholder="Password" required />
+                <button type="submit" class="btn">Login</button>
+                <a href="#" id="forgot-password">Forgot password?</a>
+              </form>
+
+              <form id="RegForm">
+                <input type="text" id="register-email" placeholder="Email" required />
+                <input type="password" id="register-password" placeholder="Password" required />
+                <button type="submit" class="btn">Register</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col-1">
+            <h3>100% Authentic Products</h3>
+            <p>Guaranteed savings on your purchase and 100% authentic products to choose.</p>
+          </div>
+          <div class="footer-col-1">
+            <h3>Pan India Delivery</h3>
+            <p>More than 20,000 pin codes serviceable.</p>
+          </div>
+          <div class="footer-col-1">
+            <h3>Payment Secured</h3>
+            <p>Tie-ups with secure payment gateways to offer you a seamless payment experience.</p>
+          </div>
+          <div class="footer-col-1">
+            <h3>24x7 Customer Support</h3>
+            <p>You can always rely on us to help you with your sourcing requirements.</p>
+          </div>
+        </div>
+
+        <br /><br /><br />
+
+        <div class="row">
+          <div class="footer-col-2">
+            <h3>About the Shop</h3>
+            <p>Ganesh Sales And Supply Company, the trusted name for Engineering and Industrial Tools, established in 1943. We deal in all kinds of precision measuring instruments and technical tools for more than 30 years. We try to cater to the Indian Industry.</p>
+          </div>
+
+          <div class="footer-col-3">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#">F.A.Q</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Refund Policy</a></li>
+              <li><a href="#">Shipping Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col-4">
+            <h3>Contact Information</h3>
+            <p>E-6, Ganpati Plaza, Phool Bagh Bhiwadi Rajasthan 301019</p>
+            <p>India</p>
+            <p><i class="fa fa-phone"></i> +91-XXXXXXXXXX</p>
+            <p><i class="fa fa-envelope"></i> info@ganeshsales-supplycompany.com</p>
+          </div>
+        </div>
+
+        <hr />
+        <p class="Copyright">&copy; Ganesh Sales And Supply Company</p>
+      </div>
+    </div>
+
+    <!-- JS for toggle form -->
+    <script>
+      let LoginForm = document.getElementById("LoginForm");
+      let RegForm = document.getElementById("RegForm");
+      let Indicator = document.getElementById("Indicator");
+
+      function register() {
+        RegForm.style.transform = "translateX(0px)";
+        LoginForm.style.transform = "translateX(0px)";
+        Indicator.style.transform = "translateX(100px)";
+      }
+
+      function login() {
+        RegForm.style.transform = "translateX(300px)";
+        LoginForm.style.transform = "translateX(300px)";
+        Indicator.style.transform = "translateX(0px)";
+      }
+    </script>
+  </body>
+</html>
