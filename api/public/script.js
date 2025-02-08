@@ -228,7 +228,20 @@ document.head.appendChild(style);
 
 
 
+document.getElementById("placeorder").addEventListener("click", function () {
+  const place = document.createElement("div");
+  place.className = "success-place";
 
-// Product Sorting and Display
+  place.innerHTML = `
+    <h1 class="vollkorn-custom">Order Placed Successfully!</h1>
+    <h5 class="bullet-points">We've sent you an email with the order details.</h5>
+  `;
+
+  document.body.appendChild(place);
+
+  setTimeout(() => {
+    place.remove();
+  }, 2000);
+});
 
 
