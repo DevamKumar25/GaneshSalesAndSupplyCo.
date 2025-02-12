@@ -1222,7 +1222,7 @@ form a {
 
 
 
-success-place {
+.success-place {
   position: fixed;
   top: 20px;
   right: 20px;
@@ -1251,3 +1251,6 @@ success-place {
   font-weight: normal;
   white-space: nowrap;
 }
+
+
+

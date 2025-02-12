@@ -243,5 +243,3 @@ document.getElementById("placeorder").addEventListener("click", function () {
     place.remove();
   }, 2000);
 });
-
-
